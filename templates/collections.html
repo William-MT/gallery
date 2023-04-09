@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+{% load static %}
 
 <head>
     <meta charset="utf-8">
@@ -10,12 +11,13 @@
     <title>Carousel Template · Bootstrap v5.3</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
 
 
 
     <!-- Custom styles for this template -->
-    <link href="collections.css" rel="stylesheet">
+    <link href="{% static 'collections.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -31,13 +33,13 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/boots/homepage.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/boots/collections.html">Collections</a>
+                            <a class="nav-link" href="/collections">Collections</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="/about">About</a>
                         </li>
 
                     </ul>
@@ -218,7 +220,7 @@
     </div>
 
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
 
 
 </body>

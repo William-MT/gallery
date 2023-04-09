@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+{% load static %}
 
 <head>
     <meta charset="utf-8">
@@ -8,8 +9,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.108.0">
     <title>Headers · Bootstrap v5.3</title>
-    <link href="assets/bootstrap-5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="homepage.css" rel="stylesheet">
+    <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'home.css' %}" rel="stylesheet">
 
 </head>
 
@@ -32,9 +33,9 @@
         </div>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
-            <li><a href="/boots/homepage.html" class="nav-link px-2 text-secondary">Home</a></li>
-            <li><a href="/boots/collections.html" class="nav-link px-2 text-white">Collections</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+            <li><a href="/home" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="/collections" class="nav-link px-2 text-white">Collections</a></li>
+            <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
         </ul>
     </header>
     <br>
@@ -105,9 +106,8 @@
         </div>
     </footer>
 
-    <script src="assets/bootstrap-5.3.0-alpha1/dist/js/bootstrap.bundle.js"></script>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
 

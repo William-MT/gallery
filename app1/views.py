@@ -8,4 +8,12 @@ def land(req):
 
 
 def home(req):
+    return render(req, 'home.html')
+
+
+def collections(req):
+    return render(req, 'collections.html')
+
+
+def about(req):
     return HttpResponse('Hey W...')
