@@ -43,19 +43,23 @@
 
     <main class="container">
         <div class="row m-0">
-            {% for j in cat %}
-
             <div class="col-lg-4 col-md-6 col-sm-6">
-                {% for i in imgs %}
-                <img class="w-100 my-3 rounded-3" src="{{ i.url }}">
-                <p>{{ i.name }}</p>
-                {% endfor %}
+                <img class="w-100 my-3 rounded-3" src="assets/eggs.jpg">
 
+                <img class="w-100 my-3 rounded-3" src="assets/spicies.jpg">
+                <img class="w-100 my-3 rounded-3" src="assets/spectrum.jpg">
             </div>
-
-            {% endfor %}
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <img class="w-100 my-3 rounded-3" src="assets/spicies.jpg">
+                <img class="w-100 my-3 rounded-3" src="assets/spectrum.jpg">
+                <img class="w-100 my-3 rounded-3" src="assets/eggs.jpg">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <img class="w-100 my-3 rounded-3" src="assets/spectrum.jpg">
+                <img class="w-100 my-3 rounded-3" src="assets/eggs.jpg">
+                <img class="w-100 my-3 rounded-3" src="assets/spicies.jpg">
+            </div>
         </div>
-
     </main>
 
     <footer class="container pt-5 card text-bg-dark">

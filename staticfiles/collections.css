@@ -121,10 +121,10 @@ body {
 }
 
 .icarousel {
-    max-width: 120vw;
-    width: 100vw;
-    max-height: 150vh;
-    height: 120vh;
+    max-width: 150vw;
+    min-width: 100vw;
+    max-height: 180vh;
+    min-height: 100vh;
     margin: 1 rem;
     object-fit: cover;
     border-radius: inherit;
