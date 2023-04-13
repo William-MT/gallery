@@ -7,7 +7,15 @@ import random
 
 
 def land(req):
-    return render(req, 'landpage.html')
+    vimgs = list(Image.objects.all().values())
+    random.shuffle(vimgs)
+    template = loader.get_template('landpage.html')
+    context = {
+        'imgs': vimgs,
+        'cat': [0, 1, 2],
+    }
+    return HttpResponse(template.render(context, req))
+
 
 
 def home(req):
@@ -25,8 +33,20 @@ def home(req):
 
 
 def collections(req):
-    return render(req, 'collections.html')
+    vimgs = list(Image.objects.all().values())
+    random.shuffle(vimgs)
+    print()
+    template = loader.get_template('collections.html')
+    context = {
+        'img': vimgs,
+        'imgs': vimgs,
+        'nimgs': list(range(len(vimgs))),
+        'cat': [0, 1, 2],
+    }
+    return HttpResponse(template.render(context, req))
+
 
 
 def about(req):
-    return HttpResponse('Hey W...')
+    return render(req, 'temp.htm')
+

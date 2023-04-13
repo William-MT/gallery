@@ -27,7 +27,7 @@
 
                 <div class="text-end">
                     <button type="button" class="btn btn-outline-light me-2">About</button>
-                    <button type="button" class="btn btn-warning">Contact Us</button>
+                    <button type="button" class="btn btn-primary">Contact Us</button>
                 </div>
             </div>
         </div>
@@ -42,24 +42,22 @@
 
 
     <main class="container">
-        <div class="row m-0">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <img class="w-100 my-3 rounded-3" src="assets/eggs.jpg">
-
-                <img class="w-100 my-3 rounded-3" src="assets/spicies.jpg">
-                <img class="w-100 my-3 rounded-3" src="assets/spectrum.jpg">
+        <div class="Scroll_Wrapper">
+            <div class="Item">
+                <img class="icard" src="{% static 'mountains.jpg' %}" alt="Guardians of the Galaxy" />
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <img class="w-100 my-3 rounded-3" src="assets/spicies.jpg">
-                <img class="w-100 my-3 rounded-3" src="assets/spectrum.jpg">
-                <img class="w-100 my-3 rounded-3" src="assets/eggs.jpg">
+            <div class="Item">
+                <img class="icard" src="{% static 'earth.jpg' %}" alt="Guardians of the Galaxy" />
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <img class="w-100 my-3 rounded-3" src="assets/spectrum.jpg">
-                <img class="w-100 my-3 rounded-3" src="assets/eggs.jpg">
-                <img class="w-100 my-3 rounded-3" src="assets/spicies.jpg">
+            <div class="Item">
+                <img class="icard" src="{% static 'spectrum.jpg' %}" alt="Guardians of the Galaxy" />
+            </div>
+            <div class="Item">
+                <img class="icard" src="{% static 'icemountian.jpg' %}" alt="Guardians of the Galaxy" />
             </div>
         </div>
+
+
     </main>
 
     <footer class="container pt-5 card text-bg-dark">
