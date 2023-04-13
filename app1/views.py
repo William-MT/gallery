@@ -46,5 +46,6 @@ def collections(req):
 
 
 def about(req):
-    return render(req, 'about.html')
+    template = loader.get_template('about.html')
+    return HttpResponse(template.render(context, req))
 
