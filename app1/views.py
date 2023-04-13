@@ -35,10 +35,8 @@ def home(req):
 def collections(req):
     vimgs = list(Image.objects.all().values())
     random.shuffle(vimgs)
-    print()
     template = loader.get_template('collections.html')
     context = {
-        'img': vimgs,
         'imgs': vimgs,
         'nimgs': list(range(len(vimgs))),
         'cat': [0, 1, 2],
@@ -48,5 +46,5 @@ def collections(req):
 
 
 def about(req):
-    return render(req, 'temp.htm')
+    return render(req, 'about.html')
 
