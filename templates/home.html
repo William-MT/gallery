@@ -42,18 +42,81 @@
 
 
     <main class="container">
-        <div class="row m-0">
-            {% for j in cat %}
+        <!-- Carousel wrapper -->
+        <div id="carouselVideoExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+            </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                {% for i in imgs %}
-                <img class="w-100 my-3 rounded-3" src="{{ i.url }}">
-                <p>{{ i.name }}</p>
-                {% endfor %}
+            <!-- Inner -->
+            <div class="carousel-inner">
+                <!-- Single item -->
+                <div class="carousel-item active">
+                    <video class="img-fluid" autoplay loop muted>
+    <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
+    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>All about nature</h5>
+                        <p> Explore it all in a different way.
+                        </p>
+                    </div>
+                </div>
+                <!-- Single item -->
+                <div class="carousel-item">
+                    <video class="img-fluid" autoplay loop muted>
+                        <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4" />
+    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Life givers</h5>
+                        <p>The green places in other colour.</p>
+                    </div>
+                </div>
+                <!-- Single item -->
+                <div class="carousel-item">
+                    <video class="img-fluid" autoplay loop muted>
+    <source src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4" type="video/mp4"/>
+    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Uncharted ones</h5>
+                        <p>Beyond expectations..</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Inner -->
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+            <button class="carousel-control-next" type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+        </div>
+        <!-- Carousel wrapper -->
+
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+
+                <img src="{% static 'earth.jpg' %}" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+                <img src="{% static 'icemountian.jpg' %}" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="{% static 'darkcloud.jpg' %}" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+                <img src="{% static 'spectrum.jpg' %}" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
 
             </div>
 
-            {% endfor %}
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="{% static 'gosh.png' %}" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+
+                <img src="{% static 'mountains.jpg' %}" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+            </div>
         </div>
 
     </main>

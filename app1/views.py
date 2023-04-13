@@ -14,9 +14,11 @@ def home(req):
     vimgs = list(Image.objects.all().values())
     random.shuffle(vimgs)
     template = loader.get_template('home.html')
+    vi = ['earth.jpg','spectrum.jpg', 'darkcloud.jpg', 'eggs.jpg', 'icemountian.jpg', 'gosh.png', 'lionking.png']
     vcontext = {
         'imgs': vimgs,
         'cat': [0, 1, 2],
+        'img': vi,
 
     }
     return HttpResponse(template.render(vcontext, req))
