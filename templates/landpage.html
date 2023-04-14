@@ -45,63 +45,31 @@
 
 
     <main class="container">
-        <div class="row">
+        <!-- custom made card pics with texts -->
+        <div class="container-fluid text-light">
             {% for i in imgs %}
-            <div class="Item">
-                <img class="icard" src="{% static i.url %}" />
+            <div class="card my-5 m-md-5">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-start">
+                        <img src="{{ i.url }}" class="icard">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 d-flex flex-row justify-content-start">
+                        <div>
+                            <h2> {{ i.name }} </h2>
+                            <p>{{ i.provider }}</p>
+                            <button class="btn btn-outline-primary rounded-pill">Show</button></div>
+                    </div>
+                </div>
             </div>
             {% endfor %}
         </div>
 
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="Scroll_Wrapper my-3">
+            {% for i in imgs %}
+            <div class="Item">
+                <img class="icard rounded-3" src="{{ i.url }}" />
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container w-100 h-100 d-flex align-items-center justify-content-center">
-                        <img class="icarousel" src="https://images.unsplash.com/photo-1680856652673-bfb78d35caea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"></div>
-                    <div class="container">
-                        <div class="carousel-caption text-start">
-                            <h1>Example headline.</h1>
-                            <p>Some representative placeholder content for the first slide of the carousel.</p>
-                            <p><a class="btn btn-lg rounded-pill btn-primary" href="#">Sign up today</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item ">
-                    <div class="container w-100 h-100 d-flex align-items-center justify-content-center">
-                        <img class="icarousel" src="https://images.unsplash.com/photo-1680763652764-c3714cfa872f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"></div>
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
-                            <p><a class="btn btn-lg rounded-pill btn-primary" href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item ">
-                    <div class="container w-100 h-100 d-flex align-items-center justify-content-center">
-                        <img class="icarousel" src="https://images.unsplash.com/photo-1680827237099-75f88f4264f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE5fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"></div>
-                    <div class="container">
-                        <div class="carousel-caption text-end">
-                            <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p>
-                            <p><a class="btn btn-lg rounded-pill btn-primary" href="#">Browse gallery</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+            {% endfor %}
         </div>
 
 
@@ -155,6 +123,13 @@
     </footer>
 
     <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+        function triggerModal() {
+            const myModalEl = document.getElementById('exampleModal');
+            const modal = new mdb.Modal(myModalEl);
+            modal.toggle();
+        }
+    </script>
 </body>
 
 </html>

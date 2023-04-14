@@ -17,6 +17,7 @@ body {
 
 .card {
     background-color: inherit;
+    border-radius: 3px;
     box-shadow: 1px 1px 3px black;
 }
 

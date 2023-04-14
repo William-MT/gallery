@@ -5,12 +5,17 @@ from .models import Image
 import random
 # Create your views here.
 
+oimgs = ['earth.jpg','spectrum.jpg', 'darkcloud.jpg', 'eggs.jpg', 'icemountian.jpg', 'gosh.png', 'lionking.png',
+    'spicies.jpg', 'eggs.jpg']
+
 
 def land(req):
     vimgs = list(Image.objects.all().values())
     random.shuffle(vimgs)
     template = loader.get_template('landpage.html')
+
     context = {
+        'oimgs': oimgs,
         'imgs': vimgs,
         'cat': [0, 1, 2],
     }
@@ -22,11 +27,10 @@ def home(req):
     vimgs = list(Image.objects.all().values())
     random.shuffle(vimgs)
     template = loader.get_template('home.html')
-    vi = ['earth.jpg','spectrum.jpg', 'darkcloud.jpg', 'eggs.jpg', 'icemountian.jpg', 'gosh.png', 'lionking.png']
     vcontext = {
+        'oimgs': oimgs,
         'imgs': vimgs,
         'cat': [0, 1, 2],
-        'img': vi,
 
     }
     return HttpResponse(template.render(vcontext, req))
@@ -37,6 +41,10 @@ def collections(req):
     random.shuffle(vimgs)
     template = loader.get_template('collections.html')
     context = {
+        'oimgs': oimgs,
+        'oimg0': oimgs[0],
+        'oimg1': oimgs[1],
+        'oimg2': oimgs[2],
         'imgs': vimgs,
         'nimgs': list(range(len(vimgs))),
         'cat': [0, 1, 2],
@@ -47,5 +55,7 @@ def collections(req):
 
 def about(req):
     template = loader.get_template('about.html')
+    context = {
+    }
     return HttpResponse(template.render(context, req))
 
